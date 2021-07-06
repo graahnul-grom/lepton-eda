@@ -19,6 +19,8 @@ mostlyclean-local:
 	rm -rf run.*
 
 input_files = \
+	switcap/test.sch \
+	switcap/test.ana \
 	stack_1.sch \
 	postload/test-postload.scm \
 	hierarchy-sources/bottom.sch \
@@ -100,7 +102,9 @@ XFAIL_TESTS = \
 	common/SlottedOpamps-futurenet2.out \
 	common/SlottedOpamps-switcap.out
 
-TESTS = stack_1-geda.out \
+TESTS = \
+	switcap/test.out \
+	stack_1-geda.out \
 	hierarchy-postload.out \
 	hierarchy-config_refdes_attribute_order_true.out \
 	hierarchy-config_refdes_attribute_order_false.out \
