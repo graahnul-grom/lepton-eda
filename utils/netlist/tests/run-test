@@ -68,6 +68,11 @@ cmd="\"()\""
 
 args=
 case "${backend}" in
+switcap/test)
+    backend=switcap
+    incfile=${abs_top_srcdir}/utils/netlist/tests/switcap/test.ana
+    cp $incfile $rundir/
+    ;;
 config_refdes_attribute_order_true)
     cat >> "${rundir}/lepton.conf" << EOF
 [netlist.hierarchy]
