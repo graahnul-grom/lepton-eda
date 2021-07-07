@@ -373,7 +373,8 @@
 (define switcap:write-analysis
   (lambda (package)
     (display "/* reading analysis from \"")
-    (let ((fname (switcap:write-attrib package "file")))
+    (let ((fname (gnetlist:get-package-attribute package "file")))
+      (display (basename fname))
       (display "\" */\n")
       (if (file-exists? fname)
         (switcap:cat-file (open-input-file fname) (current-output-port))
